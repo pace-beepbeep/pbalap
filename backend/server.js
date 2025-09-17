@@ -19,7 +19,7 @@ app.use(cors());
 
 // Define Routes
 app.use('/api/menu', require('./routes/menuRoutes'));
-// app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/auth', require('./routes/authRoutes'));
 // app.use('/api/orders', require('./routes/orderRoutes'));
 // ... routes lainnya
 

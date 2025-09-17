@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home'; // <-- Ganti import ini
 import MenuPage from './pages/MenuPage';
+import AdminMenuPage from './pages/AdminMenuPage';
 import LoginPage from './pages/LoginPage';
 import Navbar from './components/Navbar.jsx'; // <-- IMPORT Navbar asli
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} /> {/* <-- Ganti element ini */}
           <Route path="/menu" element={<MenuPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/admin/menu" element={<AdminMenuPage />} />
           {/* Tambahkan route lainnya di sini */}
         </Routes>
       </main>

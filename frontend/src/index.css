@@ -30,3 +30,10 @@ body {
 #root {
   width: 100%;
 }
+
+/* Tambahkan kode ini di bagian bawah file index.css */
+.btn-login:hover {
+  background-color: #4A3F35 !important;
+  color: white !important;
+  border-color: #4A3F35 !important;
+}

@@ -17,7 +17,7 @@ const Home = () => {
           <p className="mt-4 text-xl text-textColor leading-relaxed">
             Rasakan kehangatan di setiap cangkir. Cafe Echo menyajikan biji kopi terbaik yang diracik khusus untuk Anda.
           </p>
-          <Link to="/menu" className="mt-8 inline-block bg-transparent text-primary border-2 border-primary font-bold text-lg px-10 py-3 rounded-md transition-all duration-300 hover:bg-primary hover:text-white no-underline">
+          <Link to="/menu" className="mt-8 inline-block bg-transparent text-primary border-2 border-primary font-bold text-lg px-10 py-3 rounded-md transition-all duration-300 hover:bg-primary hover:text-white no-underline btn-login">
             Lihat Menu
           </Link>
         </div>

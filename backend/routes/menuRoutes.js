@@ -1,10 +1,17 @@
+// backend/routes/menuRoutes.js - LENGKAP
 const express = require('express');
 const router = express.Router();
-const { getMenus, createMenu } = require('../controllers/menuController');
-// Tambahkan middleware jika perlu proteksi
-// const { protect } = require('../middlewares/authMiddleware');
+const { 
+  getMenus, 
+  createMenu, 
+  updateMenu, 
+  deleteMenu 
+} = require('../controllers/menuController');
 
+// Rute untuk mendapatkan semua menu dan membuat menu baru
 router.route('/').get(getMenus).post(createMenu);
-// contoh: router.route('/').get(getMenus).post(protect, createMenu);
+
+// Rute untuk update dan delete menu berdasarkan ID
+router.route('/:id').put(updateMenu).delete(deleteMenu);
 
 module.exports = router;

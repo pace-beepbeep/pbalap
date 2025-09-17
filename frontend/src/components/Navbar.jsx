@@ -16,9 +16,9 @@ const Navbar = () => {
   const linkStyle = "block md:inline-block no-underline text-textColor font-medium py-2 border-b-2 border-transparent transition-all duration-300 ease-in-out hover:text-primary hover:border-primary";
   const activeLinkStyle = "text-primary border-primary";
 
-  // Gaya untuk tombol login dengan efek hover yang Anda inginkan
-  const loginButtonStyle = "px-6 py-2 border border-primary text-primary bg-transparent rounded-full cursor-pointer no-underline text-base font-semibold transition-all duration-300 ease-in-out hover:bg-primary hover:text-white";
-  const mobileLoginButtonStyle = "w-full text-center px-4 py-2 border border-primary text-primary bg-transparent rounded-full cursor-pointer no-underline text-base font-semibold transition-all duration-300 ease-in-out hover:bg-primary hover:text-white";
+  // MODIFIKASI: Menambahkan kelas "btn-login"
+  const loginButtonStyle = "btn-login px-6 py-2 border border-primary text-primary bg-transparent rounded-full cursor-pointer no-underline text-base font-semibold transition-all duration-300 ease-in-out";
+  const mobileLoginButtonStyle = "btn-login w-full text-center px-4 py-2 border border-primary text-primary bg-transparent rounded-full cursor-pointer no-underline text-base font-semibold transition-all duration-300 ease-in-out";
 
   return (
     <nav className="bg-cardBg/80 backdrop-blur-lg shadow-lg sticky top-0 z-50">
@@ -56,7 +56,7 @@ const Navbar = () => {
               <span className="font-semibold">Halo, {user.nama || 'Pengguna'}</span>
               <button
                 onClick={handleLogout}
-                className="px-6 py-2 border border-primary text-primary bg-transparent rounded-full cursor-pointer text-base font-semibold transition-all duration-300 ease-in-out hover:bg-primary hover:text-white"
+                className="btn-login px-6 py-2 border border-primary text-primary bg-transparent rounded-full cursor-pointer text-base font-semibold transition-all duration-300 ease-in-out"
               >
                 Logout
               </button>
@@ -89,7 +89,7 @@ const Navbar = () => {
                 <span className="font-semibold">Halo, {user.nama || 'Pengguna'}</span>
                 <button
                   onClick={handleLogout}
-                  className="w-full text-left px-4 py-2 border border-primary text-primary bg-transparent rounded-full cursor-pointer text-base font-semibold"
+                  className="btn-login w-full text-left px-4 py-2 border border-primary text-primary bg-transparent rounded-full cursor-pointer text-base font-semibold"
                 >
                   Logout
                 </button>
