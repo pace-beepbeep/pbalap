@@ -19,9 +19,9 @@ app.use(cors());
 
 // Define Routes
 app.use('/api/menu', require('./routes/menuRoutes'));
-app.use('/api/auth', require('./routes/authRoutes'));
+// PERBAIKAN: Aktifkan baris ini agar login bisa berfungsi
+app.use('/api/auth', require('./routes/authRoutes')); 
 // app.use('/api/orders', require('./routes/orderRoutes'));
-// ... routes lainnya
 
 const PORT = process.env.PORT || 5000;
 

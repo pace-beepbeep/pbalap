@@ -18,7 +18,7 @@ const Navbar = () => {
 
   // MODIFIKASI: Menambahkan kelas "btn-login"
   const loginButtonStyle = "btn-login px-6 py-2 border border-primary text-primary bg-transparent rounded-full cursor-pointer no-underline text-base font-semibold transition-all duration-300 ease-in-out";
-  const mobileLoginButtonStyle = "btn-login w-full text-center px-4 py-2 border border-primary text-primary bg-transparent rounded-full cursor-pointer no-underline text-base font-semibold transition-all duration-300 ease-in-out";
+  const mobileLoginButtonStyle = "btn-login w-full text-center px-4 py-2 border border-primary text-primary bg-transparent rounded-full cursor-pointer no-underline text-base font-semibold transition-all duration-300 ease-in-out btn-login";
 
   return (
     <nav className="bg-cardBg/80 backdrop-blur-lg shadow-lg sticky top-0 z-50">

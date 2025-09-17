@@ -1,4 +1,3 @@
-// backend/routes/menuRoutes.js - LENGKAP
 const express = require('express');
 const router = express.Router();
 const { 
@@ -7,11 +6,16 @@ const {
   updateMenu, 
   deleteMenu 
 } = require('../controllers/menuController');
+const { protect, isAdmin } = require('../middleware/authMiddleware');
 
-// Rute untuk mendapatkan semua menu dan membuat menu baru
-router.route('/').get(getMenus).post(createMenu);
+// Rute untuk /api/menu
+router.route('/')
+  .get(getMenus) // Bisa diakses publik
+  .post(protect, isAdmin, createMenu); // Hanya admin
 
-// Rute untuk update dan delete menu berdasarkan ID
-router.route('/:id').put(updateMenu).delete(deleteMenu);
+// Rute untuk /api/menu/:id
+router.route('/:id')
+  .put(protect, isAdmin, updateMenu) // Hanya admin
+  .delete(protect, isAdmin, deleteMenu); // Hanya admin
 
 module.exports = router;
